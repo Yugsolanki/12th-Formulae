@@ -1,0 +1,243 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+:root {
+  /**Blue Theme Colors**/
+  --primary-blue: #2196f3;
+  --darkprimary-blue: #1976d2;
+  --accent-blue: #448aff;
+  
+  /**Pink Theme Color**/
+  --primary-pink: #e91e63;
+  --darkprimary-pink: #c2185b;
+  --accent-pink: #ff4081;
+  
+  --primarytext: #212121;
+  --secondarytext: #757575;
+  --divider: #bdbdbd;
+  
+  --blue-theme: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25)), #2196f3;
+  
+  --pink-theme: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25)), #e91e63;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e6e6e6;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 0px 8px;
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+.navbar .navbar-brand {
+  font-weight: bold !important;
+  font-size: 1.9em;
+}
+
+#themebtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid white !important;
+  outline: none;
+  background: var(--pink-theme);
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: var(--primary-blue);
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: var(--accent-blue);
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: var(--accent-blue);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px 10px;
+    background: var(--darkprimary-blue);
+}
+
+#sidebar .sidebar-header h2 {
+    font-weight: bolder;
+    font-size: 2.3rem;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.3rem;
+    display: block;
+    font-weight: 600;
+}
+
+#sidebar ul li a span {
+    font-size: 1rem;
+}
+
+#sidebar ul li a:hover {
+    color: var(--darkprimary-blue);
+    background: #fff;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: var(--darkprimary-blue);
+}
+
+
+
+
+
+
+/**Page content Without Navbar**/
+
+.Page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: var(--primarytext)
+}
+
+.subject-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 400px;
+}
+
+.subject {
+  width: 200px;
+  height: 200px;
+  padding: 10px 0px ;
+  text-align: center;
+  border-radius: 40px;
+  background: transparent;
+  margin: 10px auto;
+}
+.subject:last-child {
+  padding: 17px 0 8px 0;
+}
+.subject:hover {
+  border-radius: 40px;
+}
+
+.subject img {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin-bottom: 17px;
+}
+.subject h5 {
+  font-weight: 600;
+}
+
+
+@media (min-width: 700px) {
+  
+  .navbar {
+    height: 60px;
+    margin-bottom: 55px;
+  }
+  .navbar .navbar-brand {
+    font-size: 2.4em;
+  }
+  
+  .subject-container {
+    width: 90%;
+    grid-template-columns: repeat(3,300px);
+  }
+}

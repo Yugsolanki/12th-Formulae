@@ -1,0 +1,38 @@
+:root {
+  --primarytext: #fff;
+  --dbody: #131419;
+  --dshadow-div: -5px -6px 10px rgba(255,255,255,0.07), 5px 5px 15px rgba(0,0,0,0.5);
+  
+  --dshadow-input: inset -2px -2px 6px rgba(255,255,255,0.1), inset 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+body {
+  background: var(--dbody)
+}
+.navbar {
+  box-shadow: var(--dshadow-div)
+}
+/*Index*/
+.subject {
+  box-shadow: var(--dshadow-div)
+}
+.subject:hover {
+  box-shadow: var(--dshadow-input)
+}
+/*Contact*/
+.card {
+  box-shadow: var(--dshadow-div)
+}
+.card .skew {
+  box-shadow: var(--dshadow-div)
+}
+.card .profile {
+  box-shadow: var(--dshadow-div)
+}
+.card .sm-btn .social {
+  box-shadow: var(--dshadow-div)
+}
+
+.Page {
+  color: #fff;
+}
