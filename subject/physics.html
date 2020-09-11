@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   
+  <script type="text/javascript" charset="utf-8">
+    if (window.matchMedia) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        $('head').append('<link rel="stylesheet" href="../css/dark-subject.css">');
+      } else {
+        $('head').append('<link rel="stylesheet" href="../css/light-subject.css">');
+      }
+    }
+  </script>
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,8 +42,6 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" ></script>
   <script src="https://kit.fontawesome.com/e223062291.js" crossorigin="anonymous"></script>
   
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/subject.css">
   
 </head>
 
@@ -400,13 +408,6 @@
       once: true, 
     });
     
-  if (window.matchMedia) {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      $('head').append('<link rel="stylesheet" href="../css/dark-subject.css">');
-    } else {
-      $('head').append('<link rel="stylesheet" href="../css/light-subject.css">');
-    }
-  }
     
   </script>
  
