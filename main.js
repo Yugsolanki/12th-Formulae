@@ -1,15 +1,3 @@
-onload = function () {
-if (window.matchMedia) {
-  // Check if the dark-mode Media-Query matches
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    $('head').append('<link rel="stylesheet" href="css/dark.css">');
-  } else {
-    $('head').append('<link rel="stylesheet" href="css/light.css">');
-  }
- }
-}
-
-
 $('#themebtn').click(function() {
   var clicks = $(this).data('clicks');
   if (clicks) {
