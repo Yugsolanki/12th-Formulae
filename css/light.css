@@ -32,3 +32,9 @@ body {
 .card .sm-btn .social {
   box-shadow: var(--lshadow-div)
 }
+
+
+/**Physics**/
+.Content ul .chapter {
+  box-shadow: var(--lshadow-div)
+}

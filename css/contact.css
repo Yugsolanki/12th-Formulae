@@ -1,4 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   /**Blue Theme Colors**/
@@ -18,6 +20,7 @@
   --blue-theme: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25)), #2196f3;
   
   --pink-theme: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25)), #e91e63;
+  
 }
 
 
@@ -26,12 +29,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #e6e6e6;
+    font-family: "Montserrat";
+    background: var(--dbody);
+    height: 85vh;
 }
 
 a,
@@ -47,7 +51,7 @@ a:focus {
     background-color: var(--primary-blue);
     border: none;
     border-radius: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 .navbar .navbar-brand {
   font-weight: bold !important;
@@ -178,51 +182,118 @@ ul ul a {
 
 
 
-
-
 /**Page content Without Navbar**/
 
 .Page {
   position: relative;
   width: 100%;
   height: 100%;
-  color: var(--primarytext)
+  color: var(--primarytext);
+  margin: 0;
+  padding: 0;
+}
+.Content {
+  height: 100%;
+  display: grid;
+  margin: 0;
+  padding: 0;
 }
 
-.subject-container {
+.card {
   position: relative;
+  width: 330px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.card .skew {
+  position: absolute;
+  background-color: var(--accent-blue);
+  -webkit-transform: skew(0deg, -10deg) translateY(-45%);
+  transform: skew(0deg, -10deg) translateY(-43%);
+  height: 50%;
+  width: 100%;
+}
+.card-main {
+  position: relative;
+}
+.card .profile {
+  width: 65%;
+  height: auto;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.card .profile img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   margin: auto;
-  display: grid;
+}
+
+.card .card-body h3 {
+  color: var(--primarytext);
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-shadow: 1.5px 1.5px 2px rgba(0,0,0,0.61);
+}
+.card .card-body div {
+  color: var(--secondarytext);
+  font-size: .95em;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.card .card-body blockquote {
+  margin-top: 23px;
+  font-size: 1.15em;
+}
+.card .card-body blockquote::before {
+  content: '"'; 
+  font-size: 1.15em;
+  font-weight: 700;
+}
+.card .card-body blockquote::after {
+  content: '"';
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.card .sm-btn {
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
   justify-content: space-between;
-  grid-template-columns: 400px;
+  margin: auto
 }
-
-.subject {
-  width: 200px;
-  height: 200px;
-  padding: 10px 0px ;
-  text-align: center;
-  border-radius: 40px;
-  background: transparent;
-  margin: 10px auto;
+.card .sm-btn .social {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: black;
+  margin: auto;
+  color: #fff;
+  display: grid;
+  align-content: center;
+  font-size: 2rem;
 }
-.subject:last-child {
-  padding: 17px 0 8px 0;
+.card .sm-btn .social:nth-of-type(1) {
+  background: linear-gradient(90deg,#ca3726,#e0675a)
 }
-.subject:hover {
-  border-radius: 40px;
+.card .sm-btn .social:nth-of-type(2) {
+  background: linear-gradient(90deg, #09c6f9, #045de9)
 }
-
-.subject img {
-  position: relative;
-  width: 70%;
-  height: 70%;
-  margin-bottom: 17px;
+.card .sm-btn .social:nth-of-type(3) {
+  background: linear-gradient(90deg,#ca2fde,#ed7236)
 }
-.subject h5 {
-  font-weight: 600;
+.card .sm-btn .social:nth-of-type(4) {
+  background: linear-gradient(90deg, #1197d5, #0c6792)
+}
+.card .sm-btn .social:nth-of-type(5) {
+  background: linear-gradient(90deg, #000000, #494949)
 }
 
 
@@ -236,8 +307,7 @@ ul ul a {
     font-size: 2.4em;
   }
   
-  .subject-container {
-    width: 90%;
-    grid-template-columns: repeat(3,300px);
+  .card {
+    min-width: 400px;
   }
 }

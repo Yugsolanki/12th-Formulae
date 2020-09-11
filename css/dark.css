@@ -36,3 +36,9 @@ body {
 .Page {
   color: #fff;
 }
+
+
+/**Physics**/
+.Content ul .chapter {
+  box-shadow: var(--dshadow-div);
+}

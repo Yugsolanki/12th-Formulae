@@ -21,6 +21,11 @@
     
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  
+  
+  <!-- Scroll -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
@@ -28,7 +33,7 @@
   <script src="https://kit.fontawesome.com/e223062291.js" crossorigin="anonymous"></script>
   
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="../css/subject.css">
   
 </head>
 
@@ -47,7 +52,7 @@
     <ul class="list-unstyled components">
       
       <li>
-        <a href="index.html">Home</a>
+        <a href="../index.html">Home</a>
       </li>
       
       <!--Physics-->
@@ -223,7 +228,7 @@
       </li>
       
       <li>
-        <a href="contact.html">Contact</a>
+        <a href="../contact.html">Contact</a>
       </li>
       
     </ul>
@@ -252,38 +257,106 @@
     
     <section class="Content">
     
-      <div class="card">
-       <div class="skew"></div>
-        <div class="card-main">
-        <div class="profile">
-          <img src="assets/profile.jpg" alt="Yug Solanki" />
-        </div>
-        <div class="card-body">
-          <h3>Yug Solanki</h3>
-          <div class="work">Fornt-end Developer</div>
-          <div class="work">UX/UI Designer</div>
-          
-          <blockquote class="quote">Simple and Minimalist makes everything easy to surf.</blockquote>
-        </div>
-          <div class="sm-btn">
-            <a href="mailto:yugsolanki15@gmail.com" target="_blank"  class="social">
-              <i class="far fa-envelope"></i>
-            </a>
-            <a href="https://www.facebook.com/yug.solanki.1690" target="_blank"  class="social">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com/haayekarlopehle?igshid=113tf8p8gwqzj" target="_blank" class="social">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yug-solanki-8387261a1" target="_blank"  class="social">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Yugsolanki?tab=repositories" target="_blank"  class="social">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          </div>
-      </div>
+      <ul>
+        
+        <h3 class="part">Part 1</h3>
+        
+        <li class="chapter">
+          <a href="#">
+            <span>1</span>
+            <div class="text-justify">Mathematical Logic</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>2</span>
+            <div>Matrics</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>3</span>
+            <div class="text-justify">Trigonometric Functions</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>4</span>
+            <div class="text-justify" href="#">Pair of Straight Lines</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>5</span>
+            <div class="text-justify" href="#">Vectors</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>6</span>
+            <div class="text-justify">Line and Plane</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>7</span>
+            <div class="text-justify">Linear Programming</div>
+          </a>
+        </li>
+        
+        <h3 class="part">Part 2</h3>
+        
+        <li class="chapter">
+          <a href="#">
+            <span>8</span>
+            <div class="text-justify">Differentiation</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>9</span>
+            <div class="text-justify">Applications of Derivatives</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>10</span>
+            <div>Indefinite Integration</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>11</span>
+            <a class="text-justify">Definite Integration</a>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>12</span>
+            <div class="text-justify">Application of Definite Integration</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>13</span>
+            <a class="text-justify">Differential Equations</a>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>14</span>
+            <div class="text-justify">Probability Distributions</div>
+          </a>
+        </li>
+        <li class="chapter">
+          <a href="#">
+            <span>15</span>
+            <div class="text-justify">Binomial Distribution</div>
+          </a>
+        </li>
+        
+        
+      </ul>
      
     </section>
    
@@ -300,8 +373,10 @@
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   
-  <script type="text/javascript" charset="utf-8" src="main.js">
+  <script type="text/javascript" charset="utf-8" src="../main.js">
   </script>
+  
+  
   
   <script type="text/javascript">
     $(document).ready(function() {
@@ -319,6 +394,20 @@
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       });
     });
+   
+    ScrollOut({
+      targets: '.chapter',
+      once: true, 
+    });
+    
+  if (window.matchMedia) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      $('head').append('<link rel="stylesheet" href="../css/dark.css">');
+    } else {
+      $('head').append('<link rel="stylesheet" href="../css/light.css">');
+    }
+  }
+    
   </script>
  
 </body>

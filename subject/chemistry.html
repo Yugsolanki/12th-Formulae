@@ -21,6 +21,11 @@
     
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  
+  
+  <!-- Scroll -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
@@ -28,7 +33,7 @@
   <script src="https://kit.fontawesome.com/e223062291.js" crossorigin="anonymous"></script>
   
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="../css/subject.css">
   
 </head>
 
@@ -47,7 +52,7 @@
     <ul class="list-unstyled components">
       
       <li>
-        <a href="index.html">Home</a>
+        <a href="../index.html">Home</a>
       </li>
       
       <!--Physics-->
@@ -223,7 +228,7 @@
       </li>
       
       <li>
-        <a href="contact.html">Contact</a>
+        <a href="../contact.html">Contact</a>
       </li>
       
     </ul>
@@ -252,38 +257,74 @@
     
     <section class="Content">
     
-      <div class="card">
-       <div class="skew"></div>
-        <div class="card-main">
-        <div class="profile">
-          <img src="assets/profile.jpg" alt="Yug Solanki" />
-        </div>
-        <div class="card-body">
-          <h3>Yug Solanki</h3>
-          <div class="work">Fornt-end Developer</div>
-          <div class="work">UX/UI Designer</div>
-          
-          <blockquote class="quote">Simple and Minimalist makes everything easy to surf.</blockquote>
-        </div>
-          <div class="sm-btn">
-            <a href="mailto:yugsolanki15@gmail.com" target="_blank"  class="social">
-              <i class="far fa-envelope"></i>
-            </a>
-            <a href="https://www.facebook.com/yug.solanki.1690" target="_blank"  class="social">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com/haayekarlopehle?igshid=113tf8p8gwqzj" target="_blank" class="social">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yug-solanki-8387261a1" target="_blank"  class="social">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Yugsolanki?tab=repositories" target="_blank"  class="social">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          </div>
-      </div>
+      <ul>
+        
+        <li class="chapter">
+          <span>1</span>
+          <a class="text-justify" href="#">Solid State</a>
+        </li>
+        <li class="chapter">
+          <span>2</span>
+          <a class="text-justify" href="#">Solutions</a>
+        </li>
+        <li class="chapter">
+          <span>3</span>
+          <a class="text-justify" href="#">Ionic Equilibria</a>
+        </li>
+        <li class="chapter">
+          <span>4</span>
+          <a class="text-justify" href="#">Chemical Thermodynamics</a>
+        </li>
+        <li class="chapter">
+          <span>5</span>
+          <a class="text-justify" href="#">Electrochemistry</a>
+        </li>
+        <li class="chapter">
+          <span>6</span>
+          <a class="text-justify" href="#">Chemical Kinetics</a>
+        </li>
+        <li class="chapter">
+          <span>7</span>
+          <a class="text-justify" href="#">Elements of Groups 16, 17 and 18</a>
+        </li>
+        <li class="chapter">
+          <span>8</span>
+          <a class="text-justify" href="#">Transition and Inner transition Elements</a>
+        </li>
+        <li class="chapter">
+          <span>9</span>
+          <a class="text-justify" href="#">Coordination Compounds</a>
+        </li>
+        <li class="chapter">
+          <span>10</span>
+          <a class="text-justify" href="#">Halogen Derivatives</a>
+        </li>
+        <li class="chapter">
+          <span>11</span>
+          <a class="text-justify" href="#">Alcohols, Phenols and Ethers</a>
+        </li>
+        <li class="chapter">
+          <span>12</span>
+          <a class="text-justify" href="#">Aldehydes, Ketones and Carboxylic acids</a>
+        </li>
+        <li class="chapter">
+          <span>13</span>
+          <a class="text-justify" href="#">Amines</a>
+        </li>
+        <li class="chapter">
+          <span>14</span>
+          <a class="text-justify" href="#">Biomolecules</a>
+        </li>
+        <li class="chapter">
+          <span>15</span>
+          <a class="text-justify" href="#">Introduction to Polymer Chemistry</a>
+        </li>
+        <li class="chapter">
+          <span>16</span>
+          <a class="text-justify" href="#">Green Chemistry and Nanochemistry</a>
+        </li>
+        
+      </ul>
      
     </section>
    
@@ -300,8 +341,10 @@
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   
-  <script type="text/javascript" charset="utf-8" src="main.js">
+  <script type="text/javascript" charset="utf-8" src="../main.js">
   </script>
+  
+  
   
   <script type="text/javascript">
     $(document).ready(function() {
@@ -319,6 +362,20 @@
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       });
     });
+   
+    ScrollOut({
+      targets: '.chapter',
+      once: true, 
+    });
+    
+  if (window.matchMedia) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      $('head').append('<link rel="stylesheet" href="../css/dark.css">');
+    } else {
+      $('head').append('<link rel="stylesheet" href="../css/light.css">');
+    }
+  }
+    
   </script>
  
 </body>
