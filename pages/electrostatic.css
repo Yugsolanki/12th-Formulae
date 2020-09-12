@@ -215,12 +215,14 @@ div.cards .formula-title {
   justify-content: center;
   align-items: center;
 }
+
 div.cards .sec {
-  margin-top: 13px;
+  margin-top: 19px;
 }
 h5 {
   font-size: 1.1rem;
 }
+
 div.cards .divider {
   width: 85%;
   height: 1px;
