@@ -2,7 +2,20 @@
 <html lang="en">
 <head>
   
-  </script>
+  <script>
+  MathJax = {
+    tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }, 
+    options: {
+      enableMenu: false,
+    }
+  };
+</script>
+  
+  <script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.0/es5/tex-chtml-full.js">
+</script>
   
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -35,10 +48,12 @@
   <script src="https://kit.fontawesome.com/e223062291.js" crossorigin="anonymous"></script>
   
   <!-- Custom Css-->
-  <link rel="stylesheet" href="https://12th-formulae.netlify.app/css/subject.css"/>
+  <link rel="stylesheet" href="electrostatic.css"/>
   
   <link rel="stylesheet" href="../css/dark.css" media="(prefers-color-scheme: dark)"/>
   <link rel="stylesheet" href="../css/light.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+  
+  
   
 </head>
 
@@ -261,111 +276,22 @@
     <!--///////Page Content without navbar///////-->
     
     <section class="Content">
-    
-      <ul>
-        
-        <li class="chapter">
-          <a href="#">
-            <span>1</span>
-            <div class="text-justify">Rotational Dynamics</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>2</span>
-            <div class="text-justify">Mechanical Properties of Fluids</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>3</span>
-            <div>Kinetic Theory of Gases and Radiation</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>4</span>
-            <a class="text-justify">Thermodynamics</a>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>5</span>
-            <div class="text-justify">Oscillations</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>6</span>
-            <a class="text-justify">Superposition of Waves</a>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>7</span>
-            <div class="text-justify">Wave Optics</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="../pages/electrostatic.html">
-            <span>8</span>
-            <div class="text-justify">Electrostatics</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>9</span>
-            <div class="text-justify">Current Electricity</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>10</span>
-            <div>Magnetic Fields due to Electric Current</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>11</span>
-            <div class="text-justify">Magnetic Materials</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>12</span>
-            <div class="text-justify" href="#">Electromagnetic induction</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>13</span>
-            <div class="text-justify" href="#">AC Circuits</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>14</span>
-            <div class="text-justify">Dual Nature of Radiation and Matter</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>15</span>
-            <div class="text-justify">Structure of Atoms and Nuclei</div>
-          </a>
-        </li>
-        <li class="chapter">
-          <a href="#">
-            <span>16</span>
-            <div class="text-justify" href="#">Semiconductor Devices</div>
-          </a>
-        </li>
-        
-      </ul>
+      
+      <h2 class="chpt_name">Electrostatics</h2>
+      
+      <div class="cards formula">
+        <div class="formula-title">
+          <h4>Coulomb's law</h4>
+        </div>
+        <div class="divider"></div>
+        <div class="formula">$
+        F=\frac{1}{4\pi\epsilon_{0}}\frac{q_{1}q_{2}}{r^{2}}
+        $</div>
+      </div>
      
     </section>
    
-  
+   
   <!--Page-->
   </section>
   
@@ -378,10 +304,11 @@
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   
-  <script type="text/javascript" charset="utf-8" src="../main.js">
-  </script>
+  <script type="text/javascript" charset="utf-8" src="../main.js"></script>
   
   
+
+
   
   <script type="text/javascript">
     $(document).ready(function() {
@@ -398,11 +325,6 @@
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       });
-    });
-   
-    ScrollOut({
-      targets: '.chapter',
-      once: true, 
     });
     
     

@@ -4,6 +4,8 @@
   --dshadow-div: -5px -6px 10px rgba(255,255,255,0.07), 5px 5px 15px rgba(0,0,0,0.5);
   
   --dshadow-input: inset -2px -2px 6px rgba(255,255,255,0.1), inset 2px 2px 6px rgba(0,0,0,0.8);
+  
+  --dborder: .1px solid #282828;
 }
 
 body {
@@ -41,4 +43,12 @@ body {
 /**Physics**/
 .Content ul .chapter {
   box-shadow: var(--dshadow-div);
+}
+
+
+/**Pages**/
+div.cards {
+  box-shadow: var(--dshadow-div);
+  border: var(--dborder);
+  color: #CECED0;
 }
