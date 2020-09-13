@@ -1,4 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
 
 :root {
   /**Blue Theme Colors**/
@@ -12,7 +15,7 @@
   --accent-pink: #ff4081;
   
   --primarytext: #212121;
-  --secondarytext: #757575;
+  --secondarytext: #646464;
   --divider: #bdbdbd;
   
   --blue-theme: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25)), #2196f3;
@@ -199,12 +202,12 @@ ul ul a {
 }
 
 div.cards {
-  width: 330px;
+  width: 350px;
   height: auto;
   text-align: center;
   display: grid;
   margin: 20px auto;
-  padding: 7px;
+  padding: 9px 4px;
   border-radius: 20px;
 }
 
@@ -214,6 +217,7 @@ div.cards .formula-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 div.cards .sec {
@@ -221,6 +225,7 @@ div.cards .sec {
 }
 h5 {
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 div.cards .divider {
@@ -232,7 +237,6 @@ div.cards .divider {
 div.cards .formula {
   font-size: 1.3rem;
   margin: 10px 0;
-  font-weight: 700;
 }
 
 
