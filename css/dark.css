@@ -44,6 +44,9 @@ body {
 .Content ul .chapter {
   box-shadow: var(--dshadow-div);
 }
+.Content ul .chapter:hover {
+  box-shadow: var(--dshadow-input)
+}
 
 
 /**Pages**/
