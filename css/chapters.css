@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 
 :root {
@@ -220,15 +221,15 @@ div.cards .formula-title {
   display: grid;
   justify-content: center;
   align-items: center;
-  font-family: 'Libre Baskerville', serif;
+}
+div.cards .formula-title h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
 }
 
 div.cards .sec {
   margin-top: 25px;
-}
-h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
 }
 
 div.cards .divider {
